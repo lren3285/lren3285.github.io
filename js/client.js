@@ -9,4 +9,4 @@ TrelloPowerUp.initialize({
 			text: 'Open confirm',
 		}];
 	},
-});
+}, {targetOrigin: "https://trellis.coffee"});
