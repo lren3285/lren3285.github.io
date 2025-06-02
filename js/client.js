@@ -9,17 +9,6 @@ TrelloPowerUp.initialize({
 		return [{
 			icon: BLACK_ROCKET_ICON,
 			text: 'Open confirm',
-      callback: function(t) {
-        return t.popup({
-          type: 'confirm',
-          title: "Confirm",
-          message: "Confirm?",
-          confirmText: "Confirm!",
-          onConfirm: () => {
-            console.log('Confirm!');
-          },
-        });
-      }
 		}];
 	},
 });
