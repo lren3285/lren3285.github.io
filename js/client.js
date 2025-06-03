@@ -32,4 +32,4 @@ TrelloPowerUp.initialize({
 				},
 		}];
 	},
-}, {targetOrigin: "http://localhost:2999/"});
+}, {targetOrigin: "https://trellis.coffee"});
