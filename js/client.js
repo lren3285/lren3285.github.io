@@ -18,4 +18,4 @@ TrelloPowerUp.initialize({
 				},
 		}];
 	},
-}, {targetOrigin: "https://trellis.coffee"});
+}, {targetOrigin: "http://localhost:2999/"});
