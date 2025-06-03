@@ -56,6 +56,11 @@ TrelloPowerUp.initialize({
 							}
 						}
 						],
+						search: {
+							count: 5,
+							placeholder: "placeholder",
+							empty: "no search results",
+							searching: "searching...." 
 					});
 				},
 			}];
