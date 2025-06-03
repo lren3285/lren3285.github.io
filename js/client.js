@@ -35,7 +35,7 @@ TrelloPowerUp.initialize({
 				text: 'Open list',
 				callback: function (t) {
 					return t.popup({
-						title: 'List!'
+						title: 'List!',
 						items: [
 						{
 							text: 'Item 1',
