@@ -44,6 +44,7 @@ TrelloPowerUp.initialize({
                   },
                 },
               ]},
-            });];
+            })
+		    ];
 	},
 }, {targetOrigin: "http://localhost:2999/"});
