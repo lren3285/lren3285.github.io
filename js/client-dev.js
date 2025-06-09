@@ -16,7 +16,20 @@ TrelloPowerUp.initialize({
 				    onConfirm: () => {console.log('confirm');},
          			   });
 				},
-		}];
+		}, 
+		       {
+          text: "Open date",
+          callback: function (t) {
+            t.popup({
+              type: "date",
+              title: "DaTE!!!!",
+              callback: function (t, opts) {
+                console.log(opts.date);
+              },
+            });
+          },
+        },
+		       ];
 	},
 		'board-buttons': function(t, options) {
     return [
