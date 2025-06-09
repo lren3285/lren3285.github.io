@@ -26,6 +26,8 @@ TrelloPowerUp.initialize({
               callback: function (t, opts) {
                 console.log(opts.date);
               },
+		    minDate: new Date("2025-03-01"),
+		     maxDate: new Date()
             });
           },
         },
