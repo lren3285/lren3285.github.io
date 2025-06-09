@@ -20,6 +20,20 @@ TrelloPowerUp.initialize(
             });
           },
         },
+        	       {
+          text: "Open date",
+          callback: function (t) {
+            t.popup({
+              type: "date",
+              title: "DaTE!!!!",
+              callback: function (t, opts) {
+                console.log(opts.date);
+              },
+		    minDate: new Date("2025-03-01"),
+		     maxDate: new Date()
+            });
+          },
+        },
       ];
     },
     "board-buttons": function (t, options) {
