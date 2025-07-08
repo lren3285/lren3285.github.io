@@ -64,7 +64,7 @@ TrelloPowerUp.initialize(
     icon: './images/icon.svg',
     callback: (tr) => tr.popup({
       title: tr.localizeKey('appear_in_settings'),
-      url: 'settings.html',
+      url: 'js/iframe.html',
       height: 164,
     }),
     alt: 'Second from left',
