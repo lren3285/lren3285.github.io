@@ -71,7 +71,7 @@ TrelloPowerUp.initialize(
     position: 'left',
   }, {
     icon: './images/icon.svg',
-    callback: (t) => t.updateModal({accentColor: 'FFFFFF', actions: [], fullScreen: 'true', title: "updated"}),
+    callback: (t) => t.updateModal({accentColor: 'FFFFFF', actions: [], fullScreen: true, title: "updated"}),
     alt: 'Right side',
     position: 'right',
   }],
