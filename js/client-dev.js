@@ -62,16 +62,16 @@ TrelloPowerUp.initialize(
     position: 'left',
   }, {
     icon: './images/icon.svg',
-    callback: (tr) => tr.popup({
+    callback: function (tr) {return tr.popup({
       title: tr.localizeKey('appear_in_settings'),
       url: 'js/iframe.html',
       height: 164,
-    }),
+    })},
     alt: 'Second from left',
     position: 'left',
   }, {
     icon: './images/icon.svg',
-    callback: (t) => t.updateModal({accentColor: '#FFFFFF', actions: [], fullScreen: true, title: "updated"}),
+    callback: function (t) { return t.updateModal({accentColor: '#FFFFFF', actions: [], fullScreen: true, title: "updated"})},
     alt: 'Right side',
     position: 'right',
   }],
