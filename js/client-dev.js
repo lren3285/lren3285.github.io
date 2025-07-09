@@ -57,7 +57,7 @@ TrelloPowerUp.initialize(
   // max 3, up to 1 on right side
   actions: [{
     icon: './images/icon.svg',
-    url: 'https://google.com',
+    callback: function (t) { return t.closeModal()}
     alt: 'Leftmost',
     position: 'left',
   }, {
