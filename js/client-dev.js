@@ -48,7 +48,7 @@ TrelloPowerUp.initialize(
   // initial height for iframe
   height: 500, // not used if fullscreen is true
   // whether the modal should stretch to take up the whole screen
-  fullscreen: false,
+  fullscreen: true,
   // optional function to be called if user closes modal (via `X` or escape, etc)
   callback: () => console.log('Goodbye.'),
   // optional title for header chrome
