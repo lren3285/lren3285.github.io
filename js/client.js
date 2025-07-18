@@ -75,7 +75,7 @@ TrelloPowerUp.initialize(
     alt: 'Right side',
     position: 'right',
   }
-      ];
+      ]
     },
     "board-buttons": function (t, options) {
       return [
