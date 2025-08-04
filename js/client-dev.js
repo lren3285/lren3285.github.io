@@ -161,12 +161,7 @@ TrelloPowerUp.initialize(
                 },
                 {
                   icon: "./images/icon.svg",
-                  callback: (tr) =>
-                    tr.popup({
-                      title: tr.localizeKey("appear_in_settings"),
-                      url: "settings.html",
-                      height: 164,
-                    }),
+                  callback: function (t) { return t.closeBoardBar()},
                   alt: "Second from left",
                   position: "left",
                 },
