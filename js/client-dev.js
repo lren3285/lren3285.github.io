@@ -34,6 +34,17 @@ TrelloPowerUp.initialize(
             });
           },
         },
+         {
+          text: "Open iframe",
+          callback: function (t) {
+            return t.popup({
+              title: "iframe",
+              type: "iframe",
+              url: "js/iframe.html",
+              height: 200,
+            });
+          },
+        },
         {
           text: "Open modal",
           callback: function(t) {
