@@ -15,7 +15,15 @@ TrelloPowerUp.initialize(
               message: "Confirm?",
               confirmText: "Confirm!",
               onConfirm: () => {
+                return t.popup({
+              title: "Next confirm",
+              type: "confirm",
+              message: "Confirm?",
+              confirmText: "Confirm!",
+              onConfirm: () => {
                 console.log("confirm");
+              },
+            });
               },
             });
           },
