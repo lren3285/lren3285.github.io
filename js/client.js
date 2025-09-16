@@ -70,7 +70,7 @@ TrelloPowerUp.initialize(
                 {
                   icon: "./images/icon.svg",
                   callback: function (t) {
-                    return t.closeModal();
+                    return t.sizeTo(300);
                   },
                   alt: "Leftmost",
                   position: "left",
