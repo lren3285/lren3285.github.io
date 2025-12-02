@@ -127,26 +127,21 @@ TrelloPowerUp.initialize(
           callback: function (t) {
             return t.popup({
               title: "List!",
-              items: [
-                {
-                  text: "Item 1",
-                  callback: function (t, opts) {
-                    console.log("Item 1");
-                  },
-                },
-                {
-                  text: "Item 2",
-                  callback: function (t, opts) {
-                    console.log("Item 2");
-                  },
-                },
-                {
-                  text: "Item 3",
-                  callback: function (t, opts) {
-                    console.log("Item 3");
-                  },
-                },
-              ],
+              items: function (t, options) {
+      // use options.search which is the search text entered so far
+      // return a Promise that resolves to an array of items
+      // similar to the items you provided in the client side version above
+      return new Promise(function (resolve) {
+        // you'd probably be making a network request at this point
+        resolve([{
+          text: 'Result 1',
+          callback: function (t, opts) { ... }
+        }, {
+          text: 'Result 2',
+          callback: function (t, opts) { ... }
+        }]);
+      });
+    },
               search: {
                 count: 5,
                 placeholder: "placeholder",
