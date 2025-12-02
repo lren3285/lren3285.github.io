@@ -135,7 +135,7 @@ TrelloPowerUp.initialize(
           callback(t) {
             return t.popup({
               title: 'List!',
-              items(args) {
+              items(t, options) {
                 // use args.options.search which is the search text entered so far
                 // return a Promise that resolves to an array of items
                 // similar to the items you provided in the client side version above
@@ -145,7 +145,7 @@ TrelloPowerUp.initialize(
                     {
                       text: 'Result 1',
                       callback(t, opts) {
-                        console.log(opts);
+                        console.log(t);
                       },
                     },
                     {
