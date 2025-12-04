@@ -223,14 +223,16 @@ TrelloPowerUp.initialize(
                 return t.cards('id', 'name', 'desc').then((cards) => {
                   const searchText = options.search;
                   const matchedCards = cards.filter((card) => card.name.includes(searchText));
-                  return matchedCards.map((card) => ({
+                  return matchedCards.map((card) => {
+                    return {
                     text: card.name,
                     callback: (t) => {
                         return setTimeout(function() {
                           t.closePopup();
                         }, 500);
                     },
-                  }));
+                  }
+                  });
                 })
               }
             });
