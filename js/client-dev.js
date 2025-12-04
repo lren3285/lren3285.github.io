@@ -226,16 +226,13 @@ TrelloPowerUp.initialize(
                   return matchedCards.map((card) => ({
                     text: card.name,
                     callback: () => {
-                      return t.card(card.id);
+                      return console.log(card.id).then(() => {
+                        return setTimeout(function(){
+                          t.closePopup();}, 500)});
                     },
                   }));
                 })
-              },
-              search: {
-              placeholder: 'Card name',
-                empty: 'Huh',
-                searching: 'Dependency'
-            }
+              }
             });
           },
 
