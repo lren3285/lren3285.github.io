@@ -230,7 +230,7 @@ TrelloPowerUp.initialize(
                     },
                   }));
                 })
-              }
+              },
               search: {
               placeholder: 'Card name',
                 empty: 'Huh',
