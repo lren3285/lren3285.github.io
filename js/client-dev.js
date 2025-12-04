@@ -225,8 +225,8 @@ TrelloPowerUp.initialize(
                   const matchedCards = cards.filter((card) => card.name.includes(searchText));
                   return matchedCards.map((card) => ({
                     text: card.name,
-                    callback: () => {
-                      return console.log(card.id).then(() => {
+                    callback: (t) => {
+                      return console.log(t.card.id).then(() => {
                         return setTimeout(function(){
                           t.closePopup();}, 500)});
                     },
