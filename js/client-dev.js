@@ -231,6 +231,11 @@ TrelloPowerUp.initialize(
                   }));
                 })
               }
+              search: {
+              placeholder: 'Card name',
+                empty: 'Huh',
+                searching: 'Dependency'
+            }
             });
           },
 
