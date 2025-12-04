@@ -234,7 +234,11 @@ TrelloPowerUp.initialize(
                   }
                   });
                 })
-              }
+              },
+              search: {
+                placeholder: "place",
+                empty: "nothing",
+                searching: "search",
             });
           },
 
