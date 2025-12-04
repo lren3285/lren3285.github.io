@@ -226,7 +226,7 @@ TrelloPowerUp.initialize(
                   return matchedCards.map((card) => ({
                     text: card.name,
                     callback: (t) => {
-                      return console.log(card.then(() => {
+                      return console.log(card).then(() => {
                         return setTimeout(function(){
                           t.closePopup();}, 500)});
                     },
