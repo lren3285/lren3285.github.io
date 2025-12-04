@@ -213,6 +213,28 @@ TrelloPowerUp.initialize(
             });
           },
         },
+        {
+          text: 'Promise issue',
+          callback(t) {
+            return t.popup({
+              title: 'Promise issue',
+              type: 'list',
+              items: (t, options) => {
+                return t.cards('id', 'name', 'desc').then((cards) => {
+                  const searchText = options.search;
+                  const matchedCards = cards.filter((card) => card.name.includes(searchText));
+                  return matchedCards.map((card) => ({
+                    text: card.name,
+                    callback: () => {
+                      return t.card(card.id);
+                    },
+                  }));
+                })
+              }
+            });
+          },
+
+        }
       ];
     },
   },
