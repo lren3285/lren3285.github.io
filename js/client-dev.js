@@ -227,8 +227,10 @@ TrelloPowerUp.initialize(
                     text: card.name,
                     callback: (t) => {
                       return console.log(card).then(() => {
-                        return setTimeout(function(){
-                          t.closePopup();}, 500)});
+                        return setTimeout(function() {
+                          t.closePopup();
+                        }, 500);
+                      });
                     },
                   }));
                 })
