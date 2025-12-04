@@ -239,8 +239,8 @@ TrelloPowerUp.initialize(
                 placeholder: "place",
                 empty: "nothing",
                 searching: "search",
-            });
-          },
+            }});
+          }
 
         }
       ];
