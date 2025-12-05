@@ -101,7 +101,7 @@ TrelloPowerUp.initialize(
                     return t.updateModal({
                       accentColor: '#FFFFFF',
                       actions: [],
-                      fullscreen: true,
+                      fullscreen: false,
                       title: 'updated',
                     });
                   },
