@@ -86,11 +86,7 @@ TrelloPowerUp.initialize(
                 {
                   icon: './images/icon.svg',
                   callback(tr) {
-                    return tr.popup({
-                      title: tr.localizeKey('appear_in_settings'),
-                      url: 'js/iframe.html',
-                      height: 164,
-                    });
+                   return t.sizeTo('#content');
                   },
                   alt: 'Second from left',
                   position: 'left',
