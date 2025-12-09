@@ -85,7 +85,7 @@ TrelloPowerUp.initialize(
                 },
                 {
                   icon: './images/icon.svg',
-                  callback(tr) {
+                  callback(t) {
                    return t.sizeTo('#content');
                   },
                   alt: 'Second from left',
