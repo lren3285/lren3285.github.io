@@ -85,12 +85,8 @@ TrelloPowerUp.initialize(
                 },
                 {
                   icon: './images/icon.svg',
-                  callback(tr) {
-                    return tr.popup({
-                      title: tr.localizeKey('appear_in_settings'),
-                      url: 'js/iframe.html',
-                      height: 164,
-                    });
+                  callback(t) {
+                   return t.sizeTo('#content');
                   },
                   alt: 'Second from left',
                   position: 'left',
@@ -101,7 +97,7 @@ TrelloPowerUp.initialize(
                     return t.updateModal({
                       accentColor: '#FFFFFF',
                       actions: [],
-                      fullscreen: true,
+                      fullscreen: false,
                       title: 'updated',
                     });
                   },
@@ -135,7 +131,7 @@ TrelloPowerUp.initialize(
           callback(t) {
             return t.popup({
               title: 'List!',
-              items(args) {
+              items(t, options) {
                 // use args.options.search which is the search text entered so far
                 // return a Promise that resolves to an array of items
                 // similar to the items you provided in the client side version above
@@ -145,7 +141,7 @@ TrelloPowerUp.initialize(
                     {
                       text: 'Result 1',
                       callback(t, opts) {
-                        console.log(opts);
+                        console.log(t);
                       },
                     },
                     {
@@ -213,6 +209,36 @@ TrelloPowerUp.initialize(
             });
           },
         },
+        {
+          text: 'Promise issue',
+          callback(t) {
+            return t.popup({
+              title: 'Promise issue',
+              type: 'list',
+              items: (t, options) => {
+                return t.cards('id', 'name', 'desc').then((cards) => {
+                  const searchText = options.search;
+                  const matchedCards = cards.filter((card) => card.name.includes(searchText));
+                  return matchedCards.map((card) => {
+                    return {
+                    text: card.name,
+                    callback: (t) => {
+                        return setTimeout(function() {
+                          t.closePopup();
+                        }, 500);
+                    },
+                  }
+                  });
+                })
+              },
+              search: {
+                placeholder: "place",
+                empty: "nothing",
+                searching: "search",
+            }});
+          }
+
+        }
       ];
     },
   },
